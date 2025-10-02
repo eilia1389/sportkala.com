@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="sport kala store">
+  <meta name="keywords" content="sportkala,sport,kala,HTML,CSS">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sportkala</title>
+  <link rel="stylesheet" href="/static/1.css">
+
+  <link rel="icon" type="image/png" href="/static/eilia3.png">
+  <style>
+    .btn {
+      position: relative;
+      background: #0f2027;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+      overflow: hidden;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .btn:hover {
+      box-shadow: 0 0 20px #8e0000, 0 0 40px #fd0000, 0 0 60px #ff5959;
+    }
+
+    .stars {
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: none;
+      font-size: 24px;
+      color: #fffdef;
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover .stars {
+      display: block;
+      filter: drop-shadow(0 0 10px #fffdef);
+    }
+  </style>
+</head>
+
+<body>
+  
+  <header>
+    <h1> 🏆  اسپرت کالا  🏆  </h1>
+    <nav>
+      <a href="/index" target="_blank">خانه</a>
+      <a href="/m" target="_blank">محصولات</a>
+      <a href="/h" target="_blank">درباره ما</a>
+      <a href="/call with us" target="_blank">تماس با ما</a>
+    </nav>
+    <div class="auth-box">
+      {% if user.is_authenticated %}
+        سلام، {{ user.username }} | <a href="/logout">خروج</a>
+      {% else %}
+        <a href="/login">ورود</a>| <a href="/signup">ثبت‌نام</a> </div>
+      {% endif %}
+    </div>
+
+  </header>
+
+  <section class="hero">
+    <h2>تجهیزات حرفه‌ای برای قهرمانان واقعی</h2>
+    <p>از دمبل تا دوچرخه ثابت، همه‌چی اینجاست!</p>
+    <a href="/m"><button class="btn">مشاهده محصولات</button></a>
+  </section>
+
+  <section class="products">
+    <div class="product"> 
+      <a href="/index5" target="_blank"><img src="/static/دمبل1.jpg" alt="دمبل"></a> 
+      <h3>دمبل حرفه‌ای</h3>
+      <p>قیمت: ۵۰۰٬۰۰۰ تومان</p>
+    </div>
+    <div class="product">
+      <a href="/index4" target="_blank"><img src="/static/توپ.jpg" alt="توپ فوتبال"></a>
+      <h3>توپ فوتبال</h3>
+      <p>قیمت: ۳۰۰٬۰۰۰ تومان</p>
+    </div>
+    <div class="product">
+      <a href="/index3" target="_blank"><img src="/static/استوک.jpg" alt="کفش ورزشی"></a>
+      <h3>کفش ورزشی</h3>
+      <p>قیمت: ۱٬۲۰۰٬۰۰۰ تومان</p>
+    </div>
+  </section>
+  <footer>
+    <p> کلیه حقوق این سایت محفوظ میباشد  ۲۰۲۵ ©</p>
+  </footer>
+</body>
+</html>
