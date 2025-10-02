@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
+body {
+  background: linear-gradient(to left, #0f2747, #36728c);
+  font-family: 'Vazirmatn', sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  direction: rtl;
+}
+
+.auth-container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.auth-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.auth-container button {
+  width: 100%;
+  padding: 12px;
+  background: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.auth-container button:hover {
+  background: darkred;
+}
+
+.auth-container a {
+  color: #ffff00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.auth-container a:hover {
+  color: #ffea05;
+}

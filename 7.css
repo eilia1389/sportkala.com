@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
+
+body {
+  font-family: 'Vazirmatn', sans-serif;
+  direction: rtl;
+  background-color: #eee;
+  margin: 0;
+  padding: 0;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.left, .center, .right {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.left {
+  background-color:#9932CC;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.price {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.btn-add {
+  font-family:'Vazirmatn', sans-serif ;
+  background-color: #dedcdd;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  width: fit-content;
+  max-width: 180px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-add:hover {
+  background-color: #f10000bf;
+}
+
+.center h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.center p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.right .img-wrapper {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.right img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  touch-action: manipulation;
+  display: block;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .product-container {
+    flex-direction: column;
+    border-radius: 0;
+    width: 100%;
+  }
+
+  .left, .center, .right {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .center h1 {
+    font-size: 1.4rem;
+  }
+
+  .center p {
+    font-size: 0.95rem;
+  }
+
+  .btn-add {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .right img {
+    border-radius: 0;
+  }
+}
